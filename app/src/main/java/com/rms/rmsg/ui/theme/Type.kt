@@ -1,4 +1,4 @@
-package com.RMSL.rmsg.ui.theme
+package com.rms.rmsg.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

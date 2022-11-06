@@ -1,4 +1,4 @@
-package com.RMSL.rmsg
+package com.rms.rmsg
 
 import org.junit.Test
 

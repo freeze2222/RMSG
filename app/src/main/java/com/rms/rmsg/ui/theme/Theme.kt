@@ -1,4 +1,4 @@
-package com.RMSL.rmsg.ui.theme
+package com.rms.rmsg.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

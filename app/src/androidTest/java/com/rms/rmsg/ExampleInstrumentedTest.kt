@@ -1,4 +1,4 @@
-package com.RMSL.rmsg
+package com.rms.rmsg
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
