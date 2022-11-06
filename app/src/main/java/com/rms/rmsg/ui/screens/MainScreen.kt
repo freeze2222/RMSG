@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Yellow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
@@ -66,25 +67,32 @@ fun MainScreen() {
                         Row {
                             var columnsCount = 0
                             while (columnsCount < pages[page].size) {
-                                Column {
+                                Column(
+                                    modifier = Modifier.weight(1F),
+                                    horizontalAlignment = Alignment.CenterHorizontally
+                                ) {
                                     var j = 0
                                     while (j < pages[page][columnsCount].size) {
                                         Button(
                                             onClick = { /*TODO*/ },
                                             modifier = Modifier
                                                 .clip(RoundedCornerShape(24.dp))
-                                                .background(Coral),
+                                                .background(Coral)
+                                                .width(150.dp)
+                                                .height(80.dp),
                                             colors = ButtonDefaults.buttonColors(backgroundColor = Coral)
                                         ) {
                                             SoundText(
                                                 text = pages[page][columnsCount][j].title,
-                                                padding_start = 0.dp
+                                                padding_start = 0.dp,
+                                                size = 18.sp
                                             )
                                         }
+                                        Spacer(modifier = Modifier.height(20.dp))
                                         j++
                                     }
                                 }
-                                columnsCount ++
+                                columnsCount++
                             }
                         }
                     }

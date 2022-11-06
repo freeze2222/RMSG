@@ -9,6 +9,8 @@ fun getPages(items: List<PagerModel>): MutableList<MutableList<MutableList<Pager
     var column = 0
     var item = 0
     for (i in items) {
+        list[page][column].add(i)
+        item++
         if (column == 2) {
             column = 0
             list.add(mutableListOf<MutableList<PagerModel>>())
@@ -21,33 +23,36 @@ fun getPages(items: List<PagerModel>): MutableList<MutableList<MutableList<Pager
             column++
         }
 
-        list[page][column].add(i)
-        item++
+
     }
-    Log.e("DEB", mutableListOf("").toString())
-    Log.e("DEB",list.toString())
+    Log.e("DEBPAGE", page.toString())
+    Log.e("DEBCOLUMN", column.toString())
+    Log.e("DEBITEM", item.toString())
+    Log.e("Deb", list.toString())
     return list
 }
 
 fun getAllPagerModels(): List<PagerModel> {
     return listOf(
-        PagerModel("Test", "123"),
+        PagerModel("Test1", "123"),
         PagerModel("Test2", "12356"),
-        PagerModel("Test", "123"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test", "123"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test", "123"),
-        PagerModel("Test", "123"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test", "123"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test", "123"),
-        PagerModel("Test2", "12356"),
-        PagerModel("Test", "123")
+        PagerModel("Test3", "123"),
+        PagerModel("Test4", "12356"),
+        PagerModel("Test5", "12356"),
+        PagerModel("Test6", "12356"),
+        PagerModel("Test7", "123"),
+        PagerModel("Test8", "12356"),
+        PagerModel("Test9", "123"),
+        PagerModel("Test10", "123"),
+        PagerModel("Test11", "123"),
+        PagerModel("Test12", "12356"),
+        PagerModel("Test13", "123"),
+        PagerModel("Test14", "12356"),
+        PagerModel("Test15", "12356"),
+        PagerModel("Test16", "12356"),
+        PagerModel("Test17", "123"),
+        PagerModel("Test18", "12356"),
+        PagerModel("Test19", "123"),
+        PagerModel("Test20", "123")
     )
 }
