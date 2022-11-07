@@ -9,14 +9,15 @@ fun getPages(items: List<PagerModel>): MutableList<MutableList<MutableList<Pager
     var column = 0
     var item = 0
     for (i in items) {
-        list[page][column].add(i)
-        item++
+
         if (column == 2) {
             column = 0
             list.add(mutableListOf<MutableList<PagerModel>>())
             page++
             list[page].add(mutableListOf())
         }
+        list[page][column].add(i)
+        item++
         if (item==5){
             item=0
             list[page].add(mutableListOf<PagerModel>())
@@ -53,6 +54,16 @@ fun getAllPagerModels(): List<PagerModel> {
         PagerModel("Test17", "123"),
         PagerModel("Test18", "12356"),
         PagerModel("Test19", "123"),
-        PagerModel("Test20", "123")
+        PagerModel("Test20", "123"),
+        PagerModel("Test1", "123"),
+        PagerModel("Test2", "12356"),
+        PagerModel("Test3", "123"),
+        PagerModel("Test4", "12356"),
+        PagerModel("Test5", "12356"),
+        PagerModel("Test6", "12356"),
+        PagerModel("Test7", "123"),
+        PagerModel("Test8", "12356"),
+        PagerModel("Test9", "123"),
+        PagerModel("Test10", "123")
     )
 }
